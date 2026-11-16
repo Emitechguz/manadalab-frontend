@@ -1,5 +1,55 @@
 const paths: Record<string, string> = {
-  logo: "M4 18V6l8 8 8-8v12M8 18v-4m8 4v-4", arrow: "M5 12h14m-6-6 6 6-6 6", back: "M19 12H5m6-6-6 6 6 6", chevron: "m9 5 7 7-7 7", check: "m5 12 4 4L19 6", close: "m6 6 12 12M6 18 18 6", pc: "M3 4h18v12H3zM8 21h8m-4-5v5", tv: "M3 6h18v13H3zM8 3l4 3 4-3", ac: "M3 5h18v8H3zM6 9h12m-9 7v4m6-4v4", light: "M9 18h6m-5 3h4M8 14a6 6 0 1 1 8 0l-1 2H9z", plug: "M8 3v5m8-5v5M6 8h12v4a6 6 0 0 1-12 0zm6 10v4", room: "M4 21V3h13v18M1 21h22M9 11h2m6-5h3v15", shield: "m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6zm-4 9 3 3 5-6", lock: "M6 10h12v11H6zM8 10V7a4 4 0 0 1 8 0v3", eye: "M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12zm7 0a3 3 0 1 0 6 0 3 3 0 0 0-6 0", copy: "M8 8h13v13H8zM16 8V3H3v13h5", clock: "M12 8v5l3 2M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0", grid: "M3 3h7v7H3zm11 0h7v7h-7zM3 14h7v7H3zm11 0h7v7h-7z", report: "M5 3h14v18H5zm4 5h6m-6 4h6m-6 4h3", loans: "M4 7h16v14H4zM8 7V3h8v4m-7 6h6m-3-3 3 3-3 3", logout: "M9 4H3v16h6m0-8h12m-5-5 5 5-5 5", search: "M16 16l5 5M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0", plus: "M12 5v14M5 12h14", menu: "M4 6h16M4 12h16M4 18h16", refresh: "M20 7V3l-4 4h4a9 9 0 1 0 1 9", wifi: "M2 8a16 16 0 0 1 20 0M5 12a11 11 0 0 1 14 0m-11 4a6 6 0 0 1 8 0m-4 4h.01",
+  logo: "M4 18V6l8 8 8-8v12M8 18v-4m8 4v-4",
+  arrow: "M5 12h14m-6-6 6 6-6 6",
+  back: "M19 12H5m6-6-6 6 6 6",
+  chevron: "m9 5 7 7-7 7",
+  check: "m5 12 4 4L19 6",
+  close: "m6 6 12 12M6 18 18 6",
+  pc: "M3 4h18v12H3zM8 21h8m-4-5v5",
+  tv: "M3 6h18v13H3zM8 3l4 3 4-3",
+  ac: "M3 5h18v8H3zM6 9h12m-9 7v4m6-4v4",
+  light: "M9 18h6m-5 3h4M8 14a6 6 0 1 1 8 0l-1 2H9z",
+  plug: "M8 3v5m8-5v5M6 8h12v4a6 6 0 0 1-12 0zm6 10v4",
+  room: "M4 21V3h13v18M1 21h22M9 11h2m6-5h3v15",
+  shield: "m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6zm-4 9 3 3 5-6",
+  lock: "M6 10h12v11H6zM8 10V7a4 4 0 0 1 8 0v3",
+  eye: "M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12zm7 0a3 3 0 1 0 6 0 3 3 0 0 0-6 0",
+  copy: "M8 8h13v13H8zM16 8V3H3v13h5",
+  clock: "M12 8v5l3 2M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0",
+  grid: "M3 3h7v7H3zm11 0h7v7h-7zM3 14h7v7H3zm11 0h7v7h-7z",
+  report: "M5 3h14v18H5zm4 5h6m-6 4h6m-6 4h3",
+  loans: "M4 7h16v14H4zM8 7V3h8v4m-7 6h6m-3-3 3 3-3 3",
+  logout: "M9 4H3v16h6m0-8h12m-5-5 5 5-5 5",
+  search: "M16 16l5 5M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0",
+  plus: "M12 5v14M5 12h14",
+  menu: "M4 6h16M4 12h16M4 18h16",
+  refresh: "M20 7V3l-4 4h4a9 9 0 1 0 1 9",
+  wifi: "M2 8a16 16 0 0 1 20 0M5 12a11 11 0 0 1 14 0m-11 4a6 6 0 0 1 8 0m-4 4h.01",
 };
-export function Icon({ name }: { name: string }) { return <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d={paths[name] || paths.report} /></svg>; }
-export function deviceIcon(tipo: string) { return ({ Computadora: "pc", TV: "tv", "Aire acondicionado": "ac", Iluminación: "light", Enchufe: "plug", "Antena Wi-Fi": "wifi" } as Record<string, string>)[tipo] || "loans"; }
+
+export function Icon({ name }: { name: string }) {
+  return <svg
+    aria-hidden="true"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.7"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d={paths[name] || paths.report} />
+  </svg>;
+}
+
+export function deviceIcon(tipo: string) {
+  return (
+    {
+      Computadora: "pc",
+      TV: "tv",
+      "Aire acondicionado": "ac",
+      Iluminación: "light",
+      Enchufe: "plug",
+      "Antena Wi-Fi": "wifi"
+    } as Record<string, string>
+  )[tipo] || "loans";
+}

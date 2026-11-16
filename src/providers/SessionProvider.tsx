@@ -71,7 +71,9 @@ export function SessionProvider({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => {
-    const initial = setTimeout(() => { void refresh(); }, 0);
+    const initial = setTimeout(() => {
+      void refresh();
+    }, 0);
     const onFocus = () => {
       if (!document.hidden) void refresh();
     };

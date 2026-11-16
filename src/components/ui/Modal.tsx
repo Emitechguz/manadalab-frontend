@@ -26,7 +26,9 @@ export function Modal({ open, title, onClose, children, busy = false }: ModalPro
       ref={dialogRef}
       aria-labelledby={titleId}
       onClose={onClose}
-      onCancel={event => { if (busy) event.preventDefault(); }}
+      onCancel={event => {
+        if (busy) event.preventDefault();
+      }}
     >
       <div className="dialog-top">
         <h2 id={titleId}>{title}</h2>

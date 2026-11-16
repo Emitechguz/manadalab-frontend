@@ -8,7 +8,10 @@ export const authService = {
   login(credentials: LoginCredentials) {
     return api("/sesion", {
       method: "POST",
-      body: JSON.stringify({ ...credentials, correo: credentials.correo.trim().toLowerCase() }),
+      body: JSON.stringify({
+        ...credentials,
+        correo: credentials.correo.trim().toLowerCase()
+      }),
     });
   },
   logout(csrfToken: string) {

@@ -2,7 +2,10 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 
-export function useConsulta<T>(loader: (signal: AbortSignal) => Promise<T>, refresh = true) {
+export function useConsulta<T>(
+  loader: (signal: AbortSignal) => Promise<T>,
+  refresh = true
+) {
   const [state, setState] = useState<{
     loader: typeof loader;
     data?: T;
